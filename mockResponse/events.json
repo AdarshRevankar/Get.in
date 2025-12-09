@@ -1,0 +1,357 @@
+{
+  "status": "success",
+  "message": "Events fetched successfully",
+  "success": true,
+  "data": [
+    {
+      "eventId": "EVENT001",
+      "eventName": "Summer Music Festival 2024",
+      "eventWallpaper": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3",
+      "eventLocation": "New York, USA",
+      "eventDate": "2024-07-15"
+    },
+    {
+      "eventId": "EVENT002",
+      "eventName": "Tech Innovation Summit",
+      "eventWallpaper": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678",
+      "eventLocation": "San Francisco, USA",
+      "eventDate": "2024-08-20"
+    },
+    {
+      "eventId": "EVENT003",
+      "eventName": "Jazz Night at Blue Note",
+      "eventWallpaper": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+      "eventLocation": "London, UK",
+      "eventDate": "2024-09-05"
+    },
+    {
+      "eventId": "EVENT004",
+      "eventName": "Food & Wine Expo",
+      "eventWallpaper": "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+      "eventLocation": "Paris, France",
+      "eventDate": "2024-10-12"
+    },
+    {
+      "eventId": "EVENT005",
+      "eventName": "Marathon Championship",
+      "eventWallpaper": "https://images.unsplash.com/photo-1571008887538-b36bb32f4571",
+      "eventLocation": "Tokyo, Japan",
+      "eventDate": "2024-11-03"
+    },
+    {
+      "eventId": "EVENT006",
+      "eventName": "Photography Workshop",
+      "eventWallpaper": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4",
+      "eventLocation": "Berlin, Germany",
+      "eventDate": "2024-12-08"
+    },
+    {
+      "eventId": "EVENT007",
+      "eventName": "Comedy Night Live",
+      "eventWallpaper": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678",
+      "eventLocation": "Los Angeles, USA",
+      "eventDate": "2025-01-18"
+    },
+    {
+      "eventId": "EVENT008",
+      "eventName": "Art Gallery Opening",
+      "eventWallpaper": "https://images.unsplash.com/photo-1541961017774-22349e4a1262",
+      "eventLocation": "Barcelona, Spain",
+      "eventDate": "2025-02-14"
+    },
+    {
+      "eventId": "EVENT009",
+      "eventName": "Startup Pitch Competition",
+      "eventWallpaper": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+      "eventLocation": "Singapore",
+      "eventDate": "2025-03-22"
+    },
+    {
+      "eventId": "EVENT010",
+      "eventName": "Yoga & Wellness Retreat",
+      "eventWallpaper": "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
+      "eventLocation": "Bali, Indonesia",
+      "eventDate": "2025-04-10"
+    },
+    {
+      "eventId": "EVENT011",
+      "eventName": "Rock Concert Extravaganza",
+      "eventWallpaper": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3",
+      "eventLocation": "Chicago, USA",
+      "eventDate": "2024-07-28"
+    },
+    {
+      "eventId": "EVENT012",
+      "eventName": "AI & Machine Learning Conference",
+      "eventWallpaper": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      "eventLocation": "Boston, USA",
+      "eventDate": "2024-08-15"
+    },
+    {
+      "eventId": "EVENT013",
+      "eventName": "Theater Performance: Hamlet",
+      "eventWallpaper": "https://images.unsplash.com/photo-1503095396549-807759245b35",
+      "eventLocation": "Vienna, Austria",
+      "eventDate": "2024-09-20"
+    },
+    {
+      "eventId": "EVENT014",
+      "eventName": "Cooking Masterclass",
+      "eventWallpaper": "https://images.unsplash.com/photo-1556910103-1c02745aae4d",
+      "eventLocation": "Rome, Italy",
+      "eventDate": "2024-10-05"
+    },
+    {
+      "eventId": "EVENT015",
+      "eventName": "Basketball Championship Finals",
+      "eventWallpaper": "https://images.unsplash.com/photo-1518611012118-696072aa579a",
+      "eventLocation": "Miami, USA",
+      "eventDate": "2024-11-18"
+    },
+    {
+      "eventId": "EVENT016",
+      "eventName": "Film Festival Premiere",
+      "eventWallpaper": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
+      "eventLocation": "Cannes, France",
+      "eventDate": "2024-12-22"
+    },
+    {
+      "eventId": "EVENT017",
+      "eventName": "Dance Performance: Swan Lake",
+      "eventWallpaper": "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea",
+      "eventLocation": "Moscow, Russia",
+      "eventDate": "2025-01-25"
+    },
+    {
+      "eventId": "EVENT018",
+      "eventName": "Blockchain & Crypto Summit",
+      "eventWallpaper": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0",
+      "eventLocation": "Dubai, UAE",
+      "eventDate": "2025-02-28"
+    },
+    {
+      "eventId": "EVENT019",
+      "eventName": "Wine Tasting Experience",
+      "eventWallpaper": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3",
+      "eventLocation": "Bordeaux, France",
+      "eventDate": "2025-03-15"
+    },
+    {
+      "eventId": "EVENT020",
+      "eventName": "Soccer Match: Champions League",
+      "eventWallpaper": "https://images.unsplash.com/photo-1574629810360-7efbbe195018",
+      "eventLocation": "Madrid, Spain",
+      "eventDate": "2025-04-05"
+    },
+    {
+      "eventId": "EVENT021",
+      "eventName": "Poetry Reading Night",
+      "eventWallpaper": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570",
+      "eventLocation": "Amsterdam, Netherlands",
+      "eventDate": "2024-07-22"
+    },
+    {
+      "eventId": "EVENT022",
+      "eventName": "Cybersecurity Workshop",
+      "eventWallpaper": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+      "eventLocation": "Tel Aviv, Israel",
+      "eventDate": "2024-08-30"
+    },
+    {
+      "eventId": "EVENT023",
+      "eventName": "Classical Music Concert",
+      "eventWallpaper": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+      "eventLocation": "Prague, Czech Republic",
+      "eventDate": "2024-09-28"
+    },
+    {
+      "eventId": "EVENT024",
+      "eventName": "Fashion Week Showcase",
+      "eventWallpaper": "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+      "eventLocation": "Milan, Italy",
+      "eventDate": "2024-10-18"
+    },
+    {
+      "eventId": "EVENT025",
+      "eventName": "Tennis Grand Slam",
+      "eventWallpaper": "https://images.unsplash.com/photo-1622163642999-9586a14c8f6e",
+      "eventLocation": "Melbourne, Australia",
+      "eventDate": "2024-11-25"
+    },
+    {
+      "eventId": "EVENT026",
+      "eventName": "Gaming Convention",
+      "eventWallpaper": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f",
+      "eventLocation": "Seattle, USA",
+      "eventDate": "2024-12-15"
+    },
+    {
+      "eventId": "EVENT027",
+      "eventName": "Meditation & Mindfulness Retreat",
+      "eventWallpaper": "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
+      "eventLocation": "Kathmandu, Nepal",
+      "eventDate": "2025-01-12"
+    },
+    {
+      "eventId": "EVENT028",
+      "eventName": "Science & Innovation Fair",
+      "eventWallpaper": "https://images.unsplash.com/photo-1532094349884-543bc11b234d",
+      "eventLocation": "Stockholm, Sweden",
+      "eventDate": "2025-02-20"
+    },
+    {
+      "eventId": "EVENT029",
+      "eventName": "Beer Festival",
+      "eventWallpaper": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0",
+      "eventLocation": "Munich, Germany",
+      "eventDate": "2025-03-08"
+    },
+    {
+      "eventId": "EVENT030",
+      "eventName": "Surfing Championship",
+      "eventWallpaper": "https://images.unsplash.com/photo-1502680390469-be75c86b636f",
+      "eventLocation": "Sydney, Australia",
+      "eventDate": "2025-04-20"
+    },
+    {
+      "eventId": "EVENT031",
+      "eventName": "Stand-up Comedy Show",
+      "eventWallpaper": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678",
+      "eventLocation": "Toronto, Canada",
+      "eventDate": "2024-07-30"
+    },
+    {
+      "eventId": "EVENT032",
+      "eventName": "Digital Marketing Summit",
+      "eventWallpaper": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "eventLocation": "Austin, USA",
+      "eventDate": "2024-08-25"
+    },
+    {
+      "eventId": "EVENT033",
+      "eventName": "Opera Performance: La Traviata",
+      "eventWallpaper": "https://images.unsplash.com/photo-1503095396549-807759245b35",
+      "eventLocation": "Milan, Italy",
+      "eventDate": "2024-09-15"
+    },
+    {
+      "eventId": "EVENT034",
+      "eventName": "Sushi Making Workshop",
+      "eventWallpaper": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351",
+      "eventLocation": "Osaka, Japan",
+      "eventDate": "2024-10-28"
+    },
+    {
+      "eventId": "EVENT035",
+      "eventName": "Formula 1 Grand Prix",
+      "eventWallpaper": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+      "eventLocation": "Monaco",
+      "eventDate": "2024-11-10"
+    },
+    {
+      "eventId": "EVENT036",
+      "eventName": "Book Launch & Signing",
+      "eventWallpaper": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570",
+      "eventLocation": "Dublin, Ireland",
+      "eventDate": "2024-12-05"
+    },
+    {
+      "eventId": "EVENT037",
+      "eventName": "Ice Skating Show",
+      "eventWallpaper": "https://images.unsplash.com/photo-1516975080664-ed2fc6a13737",
+      "eventLocation": "Stockholm, Sweden",
+      "eventDate": "2025-01-30"
+    },
+    {
+      "eventId": "EVENT038",
+      "eventName": "Sustainable Energy Conference",
+      "eventWallpaper": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e",
+      "eventLocation": "Copenhagen, Denmark",
+      "eventDate": "2025-02-10"
+    },
+    {
+      "eventId": "EVENT039",
+      "eventName": "Coffee Festival",
+      "eventWallpaper": "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+      "eventLocation": "Seattle, USA",
+      "eventDate": "2025-03-25"
+    },
+    {
+      "eventId": "EVENT040",
+      "eventName": "Golf Tournament",
+      "eventWallpaper": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b",
+      "eventLocation": "St. Andrews, Scotland",
+      "eventDate": "2025-04-15"
+    },
+    {
+      "eventId": "EVENT041",
+      "eventName": "Magic Show & Illusion",
+      "eventWallpaper": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678",
+      "eventLocation": "Las Vegas, USA",
+      "eventDate": "2024-08-05"
+    },
+    {
+      "eventId": "EVENT042",
+      "eventName": "Cloud Computing Workshop",
+      "eventWallpaper": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      "eventLocation": "Zurich, Switzerland",
+      "eventDate": "2024-09-10"
+    },
+    {
+      "eventId": "EVENT043",
+      "eventName": "Blues & Soul Night",
+      "eventWallpaper": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+      "eventLocation": "New Orleans, USA",
+      "eventDate": "2024-10-22"
+    },
+    {
+      "eventId": "EVENT044",
+      "eventName": "Cheese Tasting Experience",
+      "eventWallpaper": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d",
+      "eventLocation": "Amsterdam, Netherlands",
+      "eventDate": "2024-11-15"
+    },
+    {
+      "eventId": "EVENT045",
+      "eventName": "Swimming Championship",
+      "eventWallpaper": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f",
+      "eventLocation": "Barcelona, Spain",
+      "eventDate": "2024-12-28"
+    },
+    {
+      "eventId": "EVENT046",
+      "eventName": "Virtual Reality Expo",
+      "eventWallpaper": "https://images.unsplash.com/photo-1593508512255-86ab42a8e620",
+      "eventLocation": "Tokyo, Japan",
+      "eventDate": "2025-01-20"
+    },
+    {
+      "eventId": "EVENT047",
+      "eventName": "Hiking & Nature Walk",
+      "eventWallpaper": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      "eventLocation": "Zurich, Switzerland",
+      "eventDate": "2025-02-25"
+    },
+    {
+      "eventId": "EVENT048",
+      "eventName": "Entrepreneurship Bootcamp",
+      "eventWallpaper": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+      "eventLocation": "Bangalore, India",
+      "eventDate": "2025-03-18"
+    },
+    {
+      "eventId": "EVENT049",
+      "eventName": "Craft Beer Tasting",
+      "eventWallpaper": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0",
+      "eventLocation": "Portland, USA",
+      "eventDate": "2025-04-08"
+    },
+    {
+      "eventId": "EVENT050",
+      "eventName": "Astronomy Night & Stargazing",
+      "eventWallpaper": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06",
+      "eventLocation": "Reykjavik, Iceland",
+      "eventDate": "2025-04-25"
+    }
+  ]
+}

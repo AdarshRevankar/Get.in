@@ -1,0 +1,1169 @@
+{
+  "status": "success",
+  "success": true,
+  "message": "Slots fetched successfully",
+  "data": [
+    {
+      "slotId": "SLOT001",
+      "eventId": "EVENT001",
+      "name": "Morning Slot",
+      "startTime": "09:00",
+      "endTime": "11:00"
+    },
+    {
+      "slotId": "SLOT002",
+      "eventId": "EVENT001",
+      "name": "Afternoon Slot",
+      "startTime": "13:00",
+      "endTime": "15:00"
+    },
+    {
+      "slotId": "SLOT003",
+      "eventId": "EVENT001",
+      "name": "Evening Slot",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT004",
+      "eventId": "EVENT001",
+      "name": "Night Slot",
+      "startTime": "21:00",
+      "endTime": "23:00"
+    },
+    {
+      "slotId": "SLOT005",
+      "eventId": "EVENT002",
+      "name": "Opening Session",
+      "startTime": "09:00",
+      "endTime": "10:30"
+    },
+    {
+      "slotId": "SLOT006",
+      "eventId": "EVENT002",
+      "name": "Keynote Address",
+      "startTime": "11:00",
+      "endTime": "12:30"
+    },
+    {
+      "slotId": "SLOT007",
+      "eventId": "EVENT002",
+      "name": "Afternoon Workshop",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT008",
+      "eventId": "EVENT002",
+      "name": "Networking Session",
+      "startTime": "16:30",
+      "endTime": "18:00"
+    },
+    {
+      "slotId": "SLOT009",
+      "eventId": "EVENT003",
+      "name": "Early Show",
+      "startTime": "19:00",
+      "endTime": "21:00"
+    },
+    {
+      "slotId": "SLOT010",
+      "eventId": "EVENT003",
+      "name": "Late Show",
+      "startTime": "21:30",
+      "endTime": "23:30"
+    },
+    {
+      "slotId": "SLOT011",
+      "eventId": "EVENT004",
+      "name": "Morning Tasting",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT012",
+      "eventId": "EVENT004",
+      "name": "Afternoon Tasting",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT013",
+      "eventId": "EVENT004",
+      "name": "Evening Tasting",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT014",
+      "eventId": "EVENT005",
+      "name": "Full Marathon",
+      "startTime": "06:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT015",
+      "eventId": "EVENT005",
+      "name": "Half Marathon",
+      "startTime": "07:00",
+      "endTime": "10:00"
+    },
+    {
+      "slotId": "SLOT016",
+      "eventId": "EVENT005",
+      "name": "10K Run",
+      "startTime": "08:00",
+      "endTime": "09:30"
+    },
+    {
+      "slotId": "SLOT017",
+      "eventId": "EVENT006",
+      "name": "Morning Session",
+      "startTime": "09:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT018",
+      "eventId": "EVENT006",
+      "name": "Afternoon Session",
+      "startTime": "13:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT019",
+      "eventId": "EVENT006",
+      "name": "Evening Session",
+      "startTime": "17:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT020",
+      "eventId": "EVENT007",
+      "name": "Early Show",
+      "startTime": "19:00",
+      "endTime": "20:30"
+    },
+    {
+      "slotId": "SLOT021",
+      "eventId": "EVENT007",
+      "name": "Main Show",
+      "startTime": "21:00",
+      "endTime": "22:30"
+    },
+    {
+      "slotId": "SLOT022",
+      "eventId": "EVENT007",
+      "name": "Late Show",
+      "startTime": "23:00",
+      "endTime": "00:30"
+    },
+    {
+      "slotId": "SLOT023",
+      "eventId": "EVENT008",
+      "name": "Opening Reception",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT024",
+      "eventId": "EVENT008",
+      "name": "Gallery Tour",
+      "startTime": "20:30",
+      "endTime": "22:00"
+    },
+    {
+      "slotId": "SLOT025",
+      "eventId": "EVENT009",
+      "name": "Pitch Session 1",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT026",
+      "eventId": "EVENT009",
+      "name": "Pitch Session 2",
+      "startTime": "13:00",
+      "endTime": "15:00"
+    },
+    {
+      "slotId": "SLOT027",
+      "eventId": "EVENT009",
+      "name": "Pitch Session 3",
+      "startTime": "15:30",
+      "endTime": "17:30"
+    },
+    {
+      "slotId": "SLOT028",
+      "eventId": "EVENT009",
+      "name": "Awards Ceremony",
+      "startTime": "18:00",
+      "endTime": "19:30"
+    },
+    {
+      "slotId": "SLOT029",
+      "eventId": "EVENT010",
+      "name": "Sunrise Yoga",
+      "startTime": "06:00",
+      "endTime": "07:30"
+    },
+    {
+      "slotId": "SLOT030",
+      "eventId": "EVENT010",
+      "name": "Morning Meditation",
+      "startTime": "08:00",
+      "endTime": "09:30"
+    },
+    {
+      "slotId": "SLOT031",
+      "eventId": "EVENT010",
+      "name": "Afternoon Wellness",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT032",
+      "eventId": "EVENT010",
+      "name": "Evening Relaxation",
+      "startTime": "18:00",
+      "endTime": "19:30"
+    },
+    {
+      "slotId": "SLOT033",
+      "eventId": "EVENT011",
+      "name": "Opening Act",
+      "startTime": "19:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT034",
+      "eventId": "EVENT011",
+      "name": "Main Performance",
+      "startTime": "20:30",
+      "endTime": "22:30"
+    },
+    {
+      "slotId": "SLOT035",
+      "eventId": "EVENT011",
+      "name": "Encore",
+      "startTime": "23:00",
+      "endTime": "23:30"
+    },
+    {
+      "slotId": "SLOT036",
+      "eventId": "EVENT012",
+      "name": "Session 1: AI Fundamentals",
+      "startTime": "09:00",
+      "endTime": "10:30"
+    },
+    {
+      "slotId": "SLOT037",
+      "eventId": "EVENT012",
+      "name": "Session 2: Machine Learning",
+      "startTime": "11:00",
+      "endTime": "12:30"
+    },
+    {
+      "slotId": "SLOT038",
+      "eventId": "EVENT012",
+      "name": "Session 3: Deep Learning",
+      "startTime": "14:00",
+      "endTime": "15:30"
+    },
+    {
+      "slotId": "SLOT039",
+      "eventId": "EVENT012",
+      "name": "Session 4: Neural Networks",
+      "startTime": "16:00",
+      "endTime": "17:30"
+    },
+    {
+      "slotId": "SLOT040",
+      "eventId": "EVENT012",
+      "name": "Panel Discussion",
+      "startTime": "18:00",
+      "endTime": "19:30"
+    },
+    {
+      "slotId": "SLOT041",
+      "eventId": "EVENT013",
+      "name": "Matinee Show",
+      "startTime": "14:00",
+      "endTime": "17:00"
+    },
+    {
+      "slotId": "SLOT042",
+      "eventId": "EVENT013",
+      "name": "Evening Show",
+      "startTime": "19:00",
+      "endTime": "22:00"
+    },
+    {
+      "slotId": "SLOT043",
+      "eventId": "EVENT014",
+      "name": "Morning Class",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT044",
+      "eventId": "EVENT014",
+      "name": "Afternoon Class",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT045",
+      "eventId": "EVENT014",
+      "name": "Evening Class",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT046",
+      "eventId": "EVENT015",
+      "name": "Game 1",
+      "startTime": "18:00",
+      "endTime": "20:30"
+    },
+    {
+      "slotId": "SLOT047",
+      "eventId": "EVENT015",
+      "name": "Game 2",
+      "startTime": "21:00",
+      "endTime": "23:30"
+    },
+    {
+      "slotId": "SLOT048",
+      "eventId": "EVENT016",
+      "name": "Screening 1",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT049",
+      "eventId": "EVENT016",
+      "name": "Screening 2",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT050",
+      "eventId": "EVENT016",
+      "name": "Screening 3",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT051",
+      "eventId": "EVENT016",
+      "name": "Screening 4",
+      "startTime": "20:30",
+      "endTime": "22:30"
+    },
+    {
+      "slotId": "SLOT052",
+      "eventId": "EVENT017",
+      "name": "Matinee Performance",
+      "startTime": "14:00",
+      "endTime": "16:30"
+    },
+    {
+      "slotId": "SLOT053",
+      "eventId": "EVENT017",
+      "name": "Evening Performance",
+      "startTime": "19:00",
+      "endTime": "21:30"
+    },
+    {
+      "slotId": "SLOT054",
+      "eventId": "EVENT018",
+      "name": "Keynote: Blockchain Basics",
+      "startTime": "09:00",
+      "endTime": "10:30"
+    },
+    {
+      "slotId": "SLOT055",
+      "eventId": "EVENT018",
+      "name": "Workshop: Crypto Trading",
+      "startTime": "11:00",
+      "endTime": "13:00"
+    },
+    {
+      "slotId": "SLOT056",
+      "eventId": "EVENT018",
+      "name": "Panel: Future of Crypto",
+      "startTime": "14:30",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT057",
+      "eventId": "EVENT018",
+      "name": "Networking Event",
+      "startTime": "16:30",
+      "endTime": "18:30"
+    },
+    {
+      "slotId": "SLOT058",
+      "eventId": "EVENT019",
+      "name": "Tasting Session 1",
+      "startTime": "11:00",
+      "endTime": "13:00"
+    },
+    {
+      "slotId": "SLOT059",
+      "eventId": "EVENT019",
+      "name": "Tasting Session 2",
+      "startTime": "15:00",
+      "endTime": "17:00"
+    },
+    {
+      "slotId": "SLOT060",
+      "eventId": "EVENT019",
+      "name": "Tasting Session 3",
+      "startTime": "19:00",
+      "endTime": "21:00"
+    },
+    {
+      "slotId": "SLOT061",
+      "eventId": "EVENT020",
+      "name": "Match 1",
+      "startTime": "16:00",
+      "endTime": "18:00"
+    },
+    {
+      "slotId": "SLOT062",
+      "eventId": "EVENT020",
+      "name": "Match 2",
+      "startTime": "20:00",
+      "endTime": "22:00"
+    },
+    {
+      "slotId": "SLOT063",
+      "eventId": "EVENT021",
+      "name": "Reading Session 1",
+      "startTime": "19:00",
+      "endTime": "20:30"
+    },
+    {
+      "slotId": "SLOT064",
+      "eventId": "EVENT021",
+      "name": "Reading Session 2",
+      "startTime": "21:00",
+      "endTime": "22:30"
+    },
+    {
+      "slotId": "SLOT065",
+      "eventId": "EVENT022",
+      "name": "Introduction to Cybersecurity",
+      "startTime": "09:00",
+      "endTime": "11:00"
+    },
+    {
+      "slotId": "SLOT066",
+      "eventId": "EVENT022",
+      "name": "Ethical Hacking",
+      "startTime": "11:30",
+      "endTime": "13:30"
+    },
+    {
+      "slotId": "SLOT067",
+      "eventId": "EVENT022",
+      "name": "Network Security",
+      "startTime": "14:30",
+      "endTime": "16:30"
+    },
+    {
+      "slotId": "SLOT068",
+      "eventId": "EVENT022",
+      "name": "Q&A Session",
+      "startTime": "17:00",
+      "endTime": "18:00"
+    },
+    {
+      "slotId": "SLOT069",
+      "eventId": "EVENT023",
+      "name": "Concert Part 1",
+      "startTime": "19:00",
+      "endTime": "20:30"
+    },
+    {
+      "slotId": "SLOT070",
+      "eventId": "EVENT023",
+      "name": "Intermission",
+      "startTime": "20:30",
+      "endTime": "21:00"
+    },
+    {
+      "slotId": "SLOT071",
+      "eventId": "EVENT023",
+      "name": "Concert Part 2",
+      "startTime": "21:00",
+      "endTime": "22:30"
+    },
+    {
+      "slotId": "SLOT072",
+      "eventId": "EVENT024",
+      "name": "Show 1",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT073",
+      "eventId": "EVENT024",
+      "name": "Show 2",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT074",
+      "eventId": "EVENT024",
+      "name": "Show 3",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT075",
+      "eventId": "EVENT024",
+      "name": "Show 4",
+      "startTime": "20:30",
+      "endTime": "22:30"
+    },
+    {
+      "slotId": "SLOT076",
+      "eventId": "EVENT025",
+      "name": "Men's Singles",
+      "startTime": "10:00",
+      "endTime": "13:00"
+    },
+    {
+      "slotId": "SLOT077",
+      "eventId": "EVENT025",
+      "name": "Women's Singles",
+      "startTime": "14:00",
+      "endTime": "17:00"
+    },
+    {
+      "slotId": "SLOT078",
+      "eventId": "EVENT025",
+      "name": "Men's Doubles",
+      "startTime": "18:00",
+      "endTime": "21:00"
+    },
+    {
+      "slotId": "SLOT079",
+      "eventId": "EVENT026",
+      "name": "Expo Opening",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT080",
+      "eventId": "EVENT026",
+      "name": "VR Demos",
+      "startTime": "13:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT081",
+      "eventId": "EVENT026",
+      "name": "Gaming Tournament",
+      "startTime": "17:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT082",
+      "eventId": "EVENT026",
+      "name": "Closing Ceremony",
+      "startTime": "20:30",
+      "endTime": "22:00"
+    },
+    {
+      "slotId": "SLOT083",
+      "eventId": "EVENT027",
+      "name": "Morning Meditation",
+      "startTime": "07:00",
+      "endTime": "08:30"
+    },
+    {
+      "slotId": "SLOT084",
+      "eventId": "EVENT027",
+      "name": "Nature Walk",
+      "startTime": "09:00",
+      "endTime": "11:00"
+    },
+    {
+      "slotId": "SLOT085",
+      "eventId": "EVENT027",
+      "name": "Afternoon Session",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT086",
+      "eventId": "EVENT027",
+      "name": "Evening Reflection",
+      "startTime": "18:00",
+      "endTime": "19:30"
+    },
+    {
+      "slotId": "SLOT087",
+      "eventId": "EVENT028",
+      "name": "Exhibition Opening",
+      "startTime": "09:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT088",
+      "eventId": "EVENT028",
+      "name": "Science Talks",
+      "startTime": "13:00",
+      "endTime": "15:00"
+    },
+    {
+      "slotId": "SLOT089",
+      "eventId": "EVENT028",
+      "name": "Interactive Demos",
+      "startTime": "15:30",
+      "endTime": "17:30"
+    },
+    {
+      "slotId": "SLOT090",
+      "eventId": "EVENT028",
+      "name": "Closing Event",
+      "startTime": "18:00",
+      "endTime": "19:30"
+    },
+    {
+      "slotId": "SLOT091",
+      "eventId": "EVENT029",
+      "name": "Tasting Session 1",
+      "startTime": "12:00",
+      "endTime": "14:00"
+    },
+    {
+      "slotId": "SLOT092",
+      "eventId": "EVENT029",
+      "name": "Tasting Session 2",
+      "startTime": "15:00",
+      "endTime": "17:00"
+    },
+    {
+      "slotId": "SLOT093",
+      "eventId": "EVENT029",
+      "name": "Tasting Session 3",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT094",
+      "eventId": "EVENT029",
+      "name": "Live Music",
+      "startTime": "20:30",
+      "endTime": "23:00"
+    },
+    {
+      "slotId": "SLOT095",
+      "eventId": "EVENT030",
+      "name": "Heat 1",
+      "startTime": "08:00",
+      "endTime": "10:00"
+    },
+    {
+      "slotId": "SLOT096",
+      "eventId": "EVENT030",
+      "name": "Heat 2",
+      "startTime": "11:00",
+      "endTime": "13:00"
+    },
+    {
+      "slotId": "SLOT097",
+      "eventId": "EVENT030",
+      "name": "Semi-Finals",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT098",
+      "eventId": "EVENT030",
+      "name": "Finals",
+      "startTime": "17:00",
+      "endTime": "19:00"
+    },
+    {
+      "slotId": "SLOT099",
+      "eventId": "EVENT031",
+      "name": "Early Show",
+      "startTime": "19:00",
+      "endTime": "20:30"
+    },
+    {
+      "slotId": "SLOT100",
+      "eventId": "EVENT031",
+      "name": "Main Show",
+      "startTime": "21:00",
+      "endTime": "22:30"
+    },
+    {
+      "slotId": "SLOT101",
+      "eventId": "EVENT031",
+      "name": "Late Show",
+      "startTime": "23:00",
+      "endTime": "00:30"
+    },
+    {
+      "slotId": "SLOT102",
+      "eventId": "EVENT032",
+      "name": "Keynote: Digital Trends",
+      "startTime": "09:00",
+      "endTime": "10:30"
+    },
+    {
+      "slotId": "SLOT103",
+      "eventId": "EVENT032",
+      "name": "Workshop: Social Media",
+      "startTime": "11:00",
+      "endTime": "13:00"
+    },
+    {
+      "slotId": "SLOT104",
+      "eventId": "EVENT032",
+      "name": "Workshop: SEO",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT105",
+      "eventId": "EVENT032",
+      "name": "Case Studies",
+      "startTime": "16:30",
+      "endTime": "18:00"
+    },
+    {
+      "slotId": "SLOT106",
+      "eventId": "EVENT033",
+      "name": "Matinee",
+      "startTime": "14:00",
+      "endTime": "17:00"
+    },
+    {
+      "slotId": "SLOT107",
+      "eventId": "EVENT033",
+      "name": "Evening Performance",
+      "startTime": "19:00",
+      "endTime": "22:00"
+    },
+    {
+      "slotId": "SLOT108",
+      "eventId": "EVENT034",
+      "name": "Class 1: Basics",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT109",
+      "eventId": "EVENT034",
+      "name": "Class 2: Advanced",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT110",
+      "eventId": "EVENT034",
+      "name": "Class 3: Master Class",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT111",
+      "eventId": "EVENT035",
+      "name": "Practice Session",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT112",
+      "eventId": "EVENT035",
+      "name": "Qualifying",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT113",
+      "eventId": "EVENT035",
+      "name": "Main Race",
+      "startTime": "16:30",
+      "endTime": "18:30"
+    },
+    {
+      "slotId": "SLOT114",
+      "eventId": "EVENT036",
+      "name": "Author Reading",
+      "startTime": "18:00",
+      "endTime": "19:30"
+    },
+    {
+      "slotId": "SLOT115",
+      "eventId": "EVENT036",
+      "name": "Q&A Session",
+      "startTime": "20:00",
+      "endTime": "21:00"
+    },
+    {
+      "slotId": "SLOT116",
+      "eventId": "EVENT036",
+      "name": "Book Signing",
+      "startTime": "21:00",
+      "endTime": "22:00"
+    },
+    {
+      "slotId": "SLOT117",
+      "eventId": "EVENT037",
+      "name": "Afternoon Show",
+      "startTime": "14:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT118",
+      "eventId": "EVENT037",
+      "name": "Evening Show",
+      "startTime": "19:00",
+      "endTime": "21:00"
+    },
+    {
+      "slotId": "SLOT119",
+      "eventId": "EVENT037",
+      "name": "Night Show",
+      "startTime": "21:30",
+      "endTime": "23:30"
+    },
+    {
+      "slotId": "SLOT120",
+      "eventId": "EVENT038",
+      "name": "Opening Keynote",
+      "startTime": "09:00",
+      "endTime": "10:30"
+    },
+    {
+      "slotId": "SLOT121",
+      "eventId": "EVENT038",
+      "name": "Solar Energy Panel",
+      "startTime": "11:00",
+      "endTime": "12:30"
+    },
+    {
+      "slotId": "SLOT122",
+      "eventId": "EVENT038",
+      "name": "Wind Energy Workshop",
+      "startTime": "14:00",
+      "endTime": "15:30"
+    },
+    {
+      "slotId": "SLOT123",
+      "eventId": "EVENT038",
+      "name": "Future Technologies",
+      "startTime": "16:00",
+      "endTime": "17:30"
+    },
+    {
+      "slotId": "SLOT124",
+      "eventId": "EVENT038",
+      "name": "Closing Remarks",
+      "startTime": "18:00",
+      "endTime": "19:00"
+    },
+    {
+      "slotId": "SLOT125",
+      "eventId": "EVENT039",
+      "name": "Tasting Session 1",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT126",
+      "eventId": "EVENT039",
+      "name": "Brewing Workshop",
+      "startTime": "13:00",
+      "endTime": "15:00"
+    },
+    {
+      "slotId": "SLOT127",
+      "eventId": "EVENT039",
+      "name": "Tasting Session 2",
+      "startTime": "16:00",
+      "endTime": "18:00"
+    },
+    {
+      "slotId": "SLOT128",
+      "eventId": "EVENT039",
+      "name": "Latte Art Competition",
+      "startTime": "19:00",
+      "endTime": "21:00"
+    },
+    {
+      "slotId": "SLOT129",
+      "eventId": "EVENT040",
+      "name": "Round 1",
+      "startTime": "08:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT130",
+      "eventId": "EVENT040",
+      "name": "Round 2",
+      "startTime": "13:00",
+      "endTime": "17:00"
+    },
+    {
+      "slotId": "SLOT131",
+      "eventId": "EVENT040",
+      "name": "Final Round",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT132",
+      "eventId": "EVENT041",
+      "name": "Afternoon Show",
+      "startTime": "15:00",
+      "endTime": "16:30"
+    },
+    {
+      "slotId": "SLOT133",
+      "eventId": "EVENT041",
+      "name": "Evening Show",
+      "startTime": "19:00",
+      "endTime": "20:30"
+    },
+    {
+      "slotId": "SLOT134",
+      "eventId": "EVENT041",
+      "name": "Night Show",
+      "startTime": "21:30",
+      "endTime": "23:00"
+    },
+    {
+      "slotId": "SLOT135",
+      "eventId": "EVENT042",
+      "name": "Cloud Basics",
+      "startTime": "09:00",
+      "endTime": "11:00"
+    },
+    {
+      "slotId": "SLOT136",
+      "eventId": "EVENT042",
+      "name": "AWS Workshop",
+      "startTime": "11:30",
+      "endTime": "13:30"
+    },
+    {
+      "slotId": "SLOT137",
+      "eventId": "EVENT042",
+      "name": "Azure Workshop",
+      "startTime": "14:30",
+      "endTime": "16:30"
+    },
+    {
+      "slotId": "SLOT138",
+      "eventId": "EVENT042",
+      "name": "GCP Workshop",
+      "startTime": "17:00",
+      "endTime": "19:00"
+    },
+    {
+      "slotId": "SLOT139",
+      "eventId": "EVENT043",
+      "name": "Early Set",
+      "startTime": "19:00",
+      "endTime": "20:30"
+    },
+    {
+      "slotId": "SLOT140",
+      "eventId": "EVENT043",
+      "name": "Main Set",
+      "startTime": "21:00",
+      "endTime": "23:00"
+    },
+    {
+      "slotId": "SLOT141",
+      "eventId": "EVENT043",
+      "name": "Late Set",
+      "startTime": "23:30",
+      "endTime": "01:00"
+    },
+    {
+      "slotId": "SLOT142",
+      "eventId": "EVENT044",
+      "name": "Tasting 1",
+      "startTime": "11:00",
+      "endTime": "13:00"
+    },
+    {
+      "slotId": "SLOT143",
+      "eventId": "EVENT044",
+      "name": "Tasting 2",
+      "startTime": "15:00",
+      "endTime": "17:00"
+    },
+    {
+      "slotId": "SLOT144",
+      "eventId": "EVENT044",
+      "name": "Tasting 3",
+      "startTime": "19:00",
+      "endTime": "21:00"
+    },
+    {
+      "slotId": "SLOT145",
+      "eventId": "EVENT045",
+      "name": "Heat 1",
+      "startTime": "09:00",
+      "endTime": "11:00"
+    },
+    {
+      "slotId": "SLOT146",
+      "eventId": "EVENT045",
+      "name": "Heat 2",
+      "startTime": "12:00",
+      "endTime": "14:00"
+    },
+    {
+      "slotId": "SLOT147",
+      "eventId": "EVENT045",
+      "name": "Semi-Finals",
+      "startTime": "15:00",
+      "endTime": "17:00"
+    },
+    {
+      "slotId": "SLOT148",
+      "eventId": "EVENT045",
+      "name": "Finals",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT149",
+      "eventId": "EVENT046",
+      "name": "Expo Opening",
+      "startTime": "10:00",
+      "endTime": "12:00"
+    },
+    {
+      "slotId": "SLOT150",
+      "eventId": "EVENT046",
+      "name": "VR Demos",
+      "startTime": "13:00",
+      "endTime": "16:00"
+    },
+    {
+      "slotId": "SLOT151",
+      "eventId": "EVENT046",
+      "name": "AR Showcase",
+      "startTime": "17:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT152",
+      "eventId": "EVENT046",
+      "name": "Closing Event",
+      "startTime": "20:30",
+      "endTime": "22:00"
+    },
+    {
+      "slotId": "SLOT153",
+      "eventId": "EVENT047",
+      "name": "Morning Hike",
+      "startTime": "07:00",
+      "endTime": "10:00"
+    },
+    {
+      "slotId": "SLOT154",
+      "eventId": "EVENT047",
+      "name": "Afternoon Walk",
+      "startTime": "13:00",
+      "endTime": "15:00"
+    },
+    {
+      "slotId": "SLOT155",
+      "eventId": "EVENT047",
+      "name": "Sunset Hike",
+      "startTime": "17:00",
+      "endTime": "19:00"
+    },
+    {
+      "slotId": "SLOT156",
+      "eventId": "EVENT048",
+      "name": "Session 1: Ideation",
+      "startTime": "09:00",
+      "endTime": "11:00"
+    },
+    {
+      "slotId": "SLOT157",
+      "eventId": "EVENT048",
+      "name": "Session 2: Business Model",
+      "startTime": "11:30",
+      "endTime": "13:30"
+    },
+    {
+      "slotId": "SLOT158",
+      "eventId": "EVENT048",
+      "name": "Session 3: Funding",
+      "startTime": "14:30",
+      "endTime": "16:30"
+    },
+    {
+      "slotId": "SLOT159",
+      "eventId": "EVENT048",
+      "name": "Session 4: Pitch Practice",
+      "startTime": "17:00",
+      "endTime": "19:00"
+    },
+    {
+      "slotId": "SLOT160",
+      "eventId": "EVENT048",
+      "name": "Networking",
+      "startTime": "19:30",
+      "endTime": "21:00"
+    },
+    {
+      "slotId": "SLOT161",
+      "eventId": "EVENT049",
+      "name": "Tasting 1",
+      "startTime": "12:00",
+      "endTime": "14:00"
+    },
+    {
+      "slotId": "SLOT162",
+      "eventId": "EVENT049",
+      "name": "Brewery Tour",
+      "startTime": "15:00",
+      "endTime": "17:00"
+    },
+    {
+      "slotId": "SLOT163",
+      "eventId": "EVENT049",
+      "name": "Tasting 2",
+      "startTime": "18:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT164",
+      "eventId": "EVENT050",
+      "name": "Telescope Setup",
+      "startTime": "19:00",
+      "endTime": "20:00"
+    },
+    {
+      "slotId": "SLOT165",
+      "eventId": "EVENT050",
+      "name": "Stargazing Session",
+      "startTime": "20:30",
+      "endTime": "23:00"
+    },
+    {
+      "slotId": "SLOT166",
+      "eventId": "EVENT050",
+      "name": "Astronomy Talk",
+      "startTime": "23:30",
+      "endTime": "01:00"
+    }
+  ]
+}
