@@ -30,13 +30,14 @@ import com.adrino.getin.R
 import com.adrino.getin.data.model.Event
 
 @Composable
-fun EventCard(event: Event) {
+fun EventCard(event: Event, onClick: () -> Unit = {}) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .height(200.dp),
         shape = RoundedCornerShape(16.dp),
-        elevation = CardDefaults.cardElevation(8.dp)
+        elevation = CardDefaults.cardElevation(8.dp),
+        onClick = { onClick.invoke() }
     ) {
         Box {
             AsyncImage(

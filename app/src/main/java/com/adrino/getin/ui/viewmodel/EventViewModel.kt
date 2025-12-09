@@ -12,12 +12,11 @@ class EventViewModel(
     private val repository: EventRepository
 ) : ViewModel() {
 
-    init {
-        fetchEvents()
-    }
-
     private val _eventList = MutableStateFlow<List<Event>>(listOf())
     val eventList: StateFlow<List<Event>> = _eventList
+
+    private val _selectedEvent = MutableStateFlow<Event?>(null)
+    val selectedEvent: StateFlow<Event?> = _selectedEvent
 
     fun fetchEvents() {
         viewModelScope.launch {
@@ -26,6 +25,14 @@ class EventViewModel(
                 _eventList.value = result.getOrThrow()
             }
         }
+    }
+
+    fun setSelectedEvent(event: Event) {
+        _selectedEvent.value = event
+    }
+
+    fun clearSelectedEvent() {
+        _selectedEvent.value = null
     }
 }
 
