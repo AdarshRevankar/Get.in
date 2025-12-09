@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
 
-    const val BASE_URL = "https://get-in.free.beeceptor.com/"
+    const val BASE_URL = "https://raw.githubusercontent.com/AdarshRevankar/Get.in/refs/heads/main/"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY

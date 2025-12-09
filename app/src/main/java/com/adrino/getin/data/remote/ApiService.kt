@@ -9,10 +9,10 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    @GET("event")
+    @GET("mockResponse/events.json")
     suspend fun getEvents(): Response<ApiResponse<List<Event>>>
 
-    @GET("slots")
+    @GET("mockResponse/slots.json")
     suspend fun getEventSlots(
         @Query("eventId")
         eventId: String
