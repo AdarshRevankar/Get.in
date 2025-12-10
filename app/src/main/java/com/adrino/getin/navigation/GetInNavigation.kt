@@ -16,8 +16,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.adrino.getin.data.repository.EventRepository
+import com.adrino.getin.ui.screen.ConfirmationScreen
 import com.adrino.getin.ui.screen.EventDetailScreen
 import com.adrino.getin.ui.screen.HomeScreen
+import com.adrino.getin.ui.screen.ReviewScreen
 import com.adrino.getin.ui.viewmodel.EventViewModel
 import com.adrino.getin.ui.viewmodel.EventViewModelFactory
 import com.adrino.getin.ui.viewmodel.SlotViewModel
@@ -70,17 +72,88 @@ fun GetInNavigation(
                         )
             }
         ) { backStackEntry ->
-            val eventId = backStackEntry.arguments?.getString("eventId") ?: ""
             val selectedEvent by eventViewModel.selectedEvent.collectAsState()
             val slotViewModel: SlotViewModel = viewModel(
                 factory = SlotViewModelFactory(repository)
             )
-            EventDetailScreen(
-                event = selectedEvent!!,
-                viewModel = slotViewModel,
-                onBackClick = { 
+            selectedEvent?.let {
+                EventDetailScreen(
+                    event = selectedEvent!!,
+                    viewModel = slotViewModel,
+                    onBackClick = {
+                        eventViewModel.clearSelectedEvent()
+                        navController.popBackStack()
+                    },
+                    onSlotClick = { slot ->
+                        eventViewModel.setSelectedSlot(slot)
+                        navController.navigate(
+                            NavRoute.Review.createRoute(
+                                selectedEvent?.eventId ?: "",
+                                slot.slotId ?: ""
+                            )
+                        )
+                    }
+                )
+            }
+        }
+
+        // Review Screen
+        composable(
+            route = NavRoute.Review.route,
+            arguments = listOf(
+                navArgument("eventId") { type = NavType.StringType },
+                navArgument("slotId") { type = NavType.StringType }
+            ),
+            enterTransition = {
+                fadeIn(animationSpec = tween(300)) +
+                        slideIntoContainer(
+                            towards = AnimatedContentTransitionScope.SlideDirection.Left,
+                            animationSpec = tween(300)
+                        )
+            },
+            exitTransition = {
+                fadeOut(animationSpec = tween(300)) +
+                        slideOutOfContainer(
+                            towards = AnimatedContentTransitionScope.SlideDirection.Right,
+                            animationSpec = tween(300)
+                        )
+            }
+        ) { backStackEntry ->
+            val selectedEvent by eventViewModel.selectedEvent.collectAsState()
+            val selectedSlot by eventViewModel.selectedSlot.collectAsState()
+            
+            if (selectedEvent != null && selectedSlot != null) {
+                ReviewScreen(
+                    event = selectedEvent!!,
+                    slot = selectedSlot!!,
+                    onBackClick = {
+                        eventViewModel.clearSelectedSlot()
+                        navController.popBackStack()
+                    },
+                    onBookNowClick = { userName, userEmail ->
+                        navController.navigate(NavRoute.Confirmation.route) {
+                            popUpTo(NavRoute.Review.route) { inclusive = true }
+                        }
+                    }
+                )
+            }
+        }
+
+        // Confirmation Screen
+        composable(
+            route = NavRoute.Confirmation.route,
+            enterTransition = {
+                fadeIn(animationSpec = tween(300))
+            },
+            exitTransition = {
+                fadeOut(animationSpec = tween(300))
+            }
+        ) {
+            ConfirmationScreen(
+                onGoToHomeClick = {
                     eventViewModel.clearSelectedEvent()
-                    navController.popBackStack() 
+                    eventViewModel.clearSelectedSlot()
+                    navController.popBackStack(NavRoute.Home.route, inclusive = false)
                 }
             )
         }

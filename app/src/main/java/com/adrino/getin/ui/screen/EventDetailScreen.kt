@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import com.adrino.getin.data.model.Event
+import com.adrino.getin.data.model.Slot
 import com.adrino.getin.ui.component.EventDetailTopBar
 import com.adrino.getin.ui.component.EventInfoCard
 import com.adrino.getin.ui.component.EventWallpaperHeader
@@ -26,6 +27,7 @@ fun EventDetailScreen(
     event: Event,
     viewModel: SlotViewModel,
     onBackClick: () -> Unit,
+    onSlotClick: (Slot) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val slots by viewModel.slots.collectAsState()
@@ -68,7 +70,8 @@ fun EventDetailScreen(
                 slotsSection(
                     slots = slots,
                     isLoading = isLoading,
-                    error = error
+                    error = error,
+                    onSlotClick = onSlotClick
                 )
             }
         }

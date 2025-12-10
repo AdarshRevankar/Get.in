@@ -1,5 +1,6 @@
 package com.adrino.getin.ui.component
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,6 +22,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.zIndex
 import coil.compose.AsyncImage
+import coil.compose.SubcomposeAsyncImage
 import coil.request.ImageRequest
 import com.adrino.getin.R
 import com.adrino.getin.data.model.Event
@@ -42,7 +44,7 @@ fun EventWallpaperHeader(
                 composableHeight = size.height.toFloat()
             }
     ) {
-        AsyncImage(
+        SubcomposeAsyncImage (
             model = ImageRequest.Builder(LocalContext.current)
                 .data(event.eventWallpaper)
                 .crossfade(true)
@@ -50,8 +52,20 @@ fun EventWallpaperHeader(
             contentDescription = event.eventName,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize(),
-            placeholder = painterResource(R.drawable.ic_launcher_background),
-            error = painterResource(R.drawable.ic_launcher_foreground)
+            error = {
+                Image(
+                    painter = painterResource(R.color.black),
+                    contentDescription = "Error",
+                    contentScale = ContentScale.Crop
+                )
+            },
+            loading = {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(shimmerBrush())
+                )
+            }
         )
         Box(
             modifier = Modifier
@@ -60,7 +74,7 @@ fun EventWallpaperHeader(
                     Brush.verticalGradient(
                         colors = listOf(
                             Color.Transparent,
-                            MaterialTheme.colorScheme.background.copy(0.6f),
+                            MaterialTheme.colorScheme.background.copy(0.3f),
                             MaterialTheme.colorScheme.background
                         ),
                         startY = 0f,

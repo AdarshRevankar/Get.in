@@ -1,5 +1,6 @@
 package com.adrino.getin.ui.component
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,7 +25,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
+import coil.compose.SubcomposeAsyncImage
 import coil.request.ImageRequest
 import com.adrino.getin.R
 import com.adrino.getin.data.model.Event
@@ -40,7 +41,7 @@ fun EventCard(event: Event, onClick: () -> Unit = {}) {
         onClick = { onClick.invoke() }
     ) {
         Box {
-            AsyncImage(
+            SubcomposeAsyncImage (
                 model = ImageRequest.Builder(LocalContext.current)
                     .data(event.eventWallpaper)
                     .crossfade(true)
@@ -48,8 +49,20 @@ fun EventCard(event: Event, onClick: () -> Unit = {}) {
                 contentDescription = event.eventName,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize(),
-                placeholder = painterResource(R.drawable.ic_launcher_background),
-                error = painterResource(R.drawable.ic_launcher_foreground)
+                error = {
+                    Image(
+                        painter = painterResource(R.color.black),
+                        contentDescription = "Error",
+                        contentScale = ContentScale.Crop
+                    )
+                },
+                loading = {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(shimmerBrush())
+                    )
+                }
             )
             Box(
                 modifier = Modifier
@@ -58,7 +71,8 @@ fun EventCard(event: Event, onClick: () -> Unit = {}) {
                         Brush.verticalGradient(
                             colors = listOf(
                                 Color.Transparent,
-                                Color.Black.copy(alpha = 0.7f)
+                                Color.Black.copy(alpha = 0.1f),
+                                Color.Black
                             )
                         )
                     )

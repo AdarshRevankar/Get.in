@@ -1,5 +1,6 @@
 package com.adrino.getin.ui.component
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -17,11 +18,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.adrino.getin.data.model.Slot
+import com.adrino.getin.utils.formatTimeToAMPM
 
 @Composable
-fun SlotCard(slot: Slot) {
+fun SlotCard(
+    slot: Slot,
+    onClick: () -> Unit = {}
+) {
     Card(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
         shape = RoundedCornerShape(12.dp),
         elevation = CardDefaults.cardElevation(2.dp)
     ) {
@@ -43,7 +50,7 @@ fun SlotCard(slot: Slot) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Text(
-                    text = slot.startTime.orEmpty(),
+                    text = formatTimeToAMPM(slot.startTime),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurface
                 )
@@ -54,7 +61,7 @@ fun SlotCard(slot: Slot) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Text(
-                    text = slot.endTime.orEmpty(),
+                    text = formatTimeToAMPM(slot.endTime),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurface
                 )

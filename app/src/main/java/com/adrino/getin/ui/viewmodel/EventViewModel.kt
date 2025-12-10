@@ -18,6 +18,9 @@ class EventViewModel(
     private val _selectedEvent = MutableStateFlow<Event?>(null)
     val selectedEvent: StateFlow<Event?> = _selectedEvent
 
+    private val _selectedSlot = MutableStateFlow<com.adrino.getin.data.model.Slot?>(null)
+    val selectedSlot: StateFlow<com.adrino.getin.data.model.Slot?> = _selectedSlot
+
     fun fetchEvents() {
         viewModelScope.launch {
             val result = repository.getEvents()
@@ -33,6 +36,14 @@ class EventViewModel(
 
     fun clearSelectedEvent() {
         _selectedEvent.value = null
+    }
+
+    fun setSelectedSlot(slot: com.adrino.getin.data.model.Slot) {
+        _selectedSlot.value = slot
+    }
+
+    fun clearSelectedSlot() {
+        _selectedSlot.value = null
     }
 }
 
