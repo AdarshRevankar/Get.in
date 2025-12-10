@@ -21,30 +21,33 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.core.text.isDigitsOnly
+import com.adrino.getin.data.model.Customer
 import com.adrino.getin.data.model.Event
 import com.adrino.getin.data.model.Slot
 import com.adrino.getin.ui.component.EventDetailTopBar
-import com.adrino.getin.utils.formatTimeToAMPM
+import com.adrino.getin.util.MOBILE_NUMBER_LENGTH
+import com.adrino.getin.util.formatTimeToAMPM
 
 @Composable
 fun ReviewScreen(
     event: Event,
     slot: Slot,
     onBackClick: () -> Unit,
-    onBookNowClick: (String, String) -> Unit,
+    onBookNowClick: (Customer) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    var userName by remember { mutableStateOf("") }
-    var userEmail by remember { mutableStateOf("") }
-    
-    val isFormValid = userName.isNotBlank() && userEmail.isNotBlank() && 
-                     userEmail.contains("@") && userEmail.contains(".")
+    var userName by rememberSaveable { mutableStateOf("") }
+    var userPhoneNumber by rememberSaveable { mutableStateOf("") }
+
+    val isFormValid = userName.isNotBlank() && userPhoneNumber.isNotBlank() &&
+            userPhoneNumber.isDigitsOnly() && userPhoneNumber.length == MOBILE_NUMBER_LENGTH
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -178,19 +181,24 @@ fun ReviewScreen(
             )
 
             OutlinedTextField(
-                value = userEmail,
-                onValueChange = { userEmail = it },
-                label = { Text("Email") },
+                value = userPhoneNumber,
+                onValueChange = {  enteredPhoneNumber ->
+                    if (enteredPhoneNumber.length <= MOBILE_NUMBER_LENGTH) {
+                        userPhoneNumber = enteredPhoneNumber
+                    }
+                },
+                label = { Text("Mobile Number") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                maxLines = 1,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
                 shape = RoundedCornerShape(8.dp)
             )
 
             Spacer(modifier = Modifier.height(8.dp))
 
             Button(
-                onClick = { onBookNowClick(userName, userEmail) },
+                onClick = { onBookNowClick(Customer(userName, userPhoneNumber)) },
                 enabled = isFormValid,
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(12.dp)

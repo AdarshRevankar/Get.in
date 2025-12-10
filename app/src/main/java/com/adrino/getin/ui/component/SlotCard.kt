@@ -18,7 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.adrino.getin.data.model.Slot
-import com.adrino.getin.utils.formatTimeToAMPM
+import com.adrino.getin.util.formatTimeToAMPM
 
 @Composable
 fun SlotCard(

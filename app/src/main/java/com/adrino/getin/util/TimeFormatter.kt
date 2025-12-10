@@ -1,4 +1,4 @@
-package com.adrino.getin.utils
+package com.adrino.getin.util
 
 fun formatTimeToAMPM(time24: String?): String {
     if (time24.isNullOrBlank()) return ""

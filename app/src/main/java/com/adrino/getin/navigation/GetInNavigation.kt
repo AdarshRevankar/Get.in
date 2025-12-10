@@ -130,10 +130,22 @@ fun GetInNavigation(
                         eventViewModel.clearSelectedSlot()
                         navController.popBackStack()
                     },
-                    onBookNowClick = { userName, userEmail ->
-                        navController.navigate(NavRoute.Confirmation.route) {
-                            popUpTo(NavRoute.Review.route) { inclusive = true }
-                        }
+                    onBookNowClick = { customer ->
+                        eventViewModel.bookSlot(
+                            eventId = selectedEvent?.eventId ?: "",
+                            slotId = selectedSlot?.slotId ?: "",
+                            customer = customer,
+                            onSuccess = {
+                                navController.navigate(NavRoute.Confirmation.route) {
+                                    popUpTo(NavRoute.Review.route) { inclusive = true }
+                                }
+                            },
+                            onError = { errorMessage ->
+                                navController.navigate(NavRoute.Confirmation.route) {
+                                    popUpTo(NavRoute.Review.route) { inclusive = true }
+                                }
+                            }
+                        )
                     }
                 )
             }

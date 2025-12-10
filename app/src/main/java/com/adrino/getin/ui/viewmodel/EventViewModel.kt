@@ -2,6 +2,7 @@ package com.adrino.getin.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.adrino.getin.data.model.Customer
 import com.adrino.getin.data.model.Event
 import com.adrino.getin.data.repository.EventRepository
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -26,6 +27,20 @@ class EventViewModel(
             val result = repository.getEvents()
             if (result.isSuccess) {
                 _eventList.value = result.getOrThrow()
+            }
+        }
+    }
+
+    fun bookSlot(
+        eventId: String, slotId: String, customer: Customer,
+        onSuccess: () -> Unit, onError: (String) -> Unit
+    ) {
+        viewModelScope.launch {
+            val result = repository.bookSlot(eventId, slotId, customer)
+            if (result.isSuccess) {
+                onSuccess()
+            } else {
+                onError(result.exceptionOrNull()?.message ?: "Booking failed")
             }
         }
     }
