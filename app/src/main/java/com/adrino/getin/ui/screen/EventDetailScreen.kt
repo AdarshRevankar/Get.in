@@ -70,7 +70,7 @@ fun EventDetailScreen(
                 slotsSection(
                     slots = slots,
                     isLoading = isLoading,
-                    error = error,
+                    error = error?.errorMessage,
                     onSlotClick = onSlotClick
                 )
             }

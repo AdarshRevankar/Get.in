@@ -14,7 +14,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.adrino.getin.R
 import com.adrino.getin.data.model.Slot
 
 fun LazyListScope.slotsSection(
@@ -25,7 +27,7 @@ fun LazyListScope.slotsSection(
 ) {
     item {
         Text(
-            text = "Available Slots",
+            text = stringResource(R.string.available_slots),
             style = MaterialTheme.typography.titleLarge,
             modifier = Modifier.padding(bottom = 12.dp),
             color = MaterialTheme.colorScheme.onSurface
@@ -69,7 +71,7 @@ fun LazyListScope.slotsSection(
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
-                        text = "No slots available",
+                        text = stringResource(R.string.no_slots_available),
                         modifier = Modifier.padding(16.dp),
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )

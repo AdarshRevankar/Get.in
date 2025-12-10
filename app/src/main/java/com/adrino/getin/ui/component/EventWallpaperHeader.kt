@@ -19,6 +19,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.zIndex
 import coil.compose.AsyncImage
@@ -55,7 +56,7 @@ fun EventWallpaperHeader(
             error = {
                 Image(
                     painter = painterResource(R.color.black),
-                    contentDescription = "Error",
+                    contentDescription = stringResource(R.string.error),
                     contentScale = ContentScale.Crop
                 )
             },

@@ -15,9 +15,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.adrino.getin.R
 import com.adrino.getin.data.model.Slot
+import com.adrino.getin.util.CARD_CORNER_RADIUS
+import com.adrino.getin.util.CARD_PADDING
+import com.adrino.getin.util.MEDIUM_SPACING
 import com.adrino.getin.util.formatTimeToAMPM
 
 @Composable
@@ -29,11 +34,11 @@ fun SlotCard(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(12.dp),
+        shape = RoundedCornerShape(CARD_CORNER_RADIUS.dp),
         elevation = CardDefaults.cardElevation(2.dp)
     ) {
         Column(
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(CARD_PADDING.dp)
         ) {
             Text(
                 text = slot.name.orEmpty(),
@@ -42,10 +47,10 @@ fun SlotCard(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(MEDIUM_SPACING.dp))
             Row {
                 Text(
-                    text = "Start: ",
+                    text = stringResource(R.string.start),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -56,7 +61,7 @@ fun SlotCard(
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(
-                    text = "End: ",
+                    text = stringResource(R.string.end),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )

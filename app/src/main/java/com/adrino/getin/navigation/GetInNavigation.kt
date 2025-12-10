@@ -69,9 +69,9 @@ fun GetInNavigation(
         ) { backStackEntry ->
             val selectedEvent by eventViewModel.selectedEvent.collectAsState()
             val slotViewModel: SlotViewModel = hiltViewModel()
-            selectedEvent?.let {
+            selectedEvent?.let { event ->
                 EventDetailScreen(
-                    event = selectedEvent!!,
+                    event = event,
                     viewModel = slotViewModel,
                     onBackClick = {
                         eventViewModel.clearSelectedEvent()
@@ -80,11 +80,10 @@ fun GetInNavigation(
                     },
                     onSlotClick = { slot ->
                         eventViewModel.setSelectedSlot(slot)
+                        val eventId = event.eventId ?: return@EventDetailScreen
+                        val slotId = slot.slotId ?: return@EventDetailScreen
                         navController.navigate(
-                            NavRoute.Review.createRoute(
-                                selectedEvent?.eventId ?: "",
-                                slot.slotId ?: ""
-                            )
+                            NavRoute.Review.createRoute(eventId, slotId)
                         )
                     }
                 )
@@ -117,35 +116,42 @@ fun GetInNavigation(
             val selectedSlot by eventViewModel.selectedSlot.collectAsState()
             val isBooking by eventViewModel.isBooking.collectAsState()
             
-            if (selectedEvent != null && selectedSlot != null) {
-                ReviewScreen(
-                    event = selectedEvent!!,
-                    slot = selectedSlot!!,
-                    onBackClick = {
-                        if (!isBooking) {
-                            eventViewModel.clearSelectedSlot()
-                            navController.popBackStack()
-                        }
-                    },
-                    onBookNowClick = { customer ->
-                        eventViewModel.bookSlot(
-                            eventId = selectedEvent?.eventId ?: "",
-                            slotId = selectedSlot?.slotId ?: "",
-                            customer = customer,
-                            onSuccess = {
-                                navController.navigate(NavRoute.Confirmation.route) {
-                                    popUpTo(NavRoute.Review.route) { inclusive = true }
-                                }
-                            },
-                            onError = { errorMessage ->
-                                navController.navigate(NavRoute.Confirmation.route) {
-                                    popUpTo(NavRoute.Review.route) { inclusive = true }
-                                }
+            val event = selectedEvent
+            val slot = selectedSlot
+            
+            if (event != null && slot != null) {
+                val eventId = event.eventId
+                val slotId = slot.slotId
+                
+                if (eventId != null && slotId != null) {
+                    ReviewScreen(
+                        event = event, slot = slot,
+                        onBackClick = {
+                            if (!isBooking) {
+                                eventViewModel.clearSelectedSlot()
+                                navController.popBackStack()
                             }
-                        )
-                    },
-                    isBooking = isBooking
-                )
+                        },
+                        onBookNowClick = { customer ->
+                            eventViewModel.bookSlot(
+                                eventId = eventId,
+                                slotId = slotId,
+                                customer = customer,
+                                onSuccess = {
+                                    navController.navigate(NavRoute.Confirmation.route) {
+                                        popUpTo(NavRoute.Review.route) { inclusive = true }
+                                    }
+                                },
+                                onError = { errorMessage ->
+                                    navController.navigate(NavRoute.Confirmation.route) {
+                                        popUpTo(NavRoute.Review.route) { inclusive = true }
+                                    }
+                                }
+                            )
+                        },
+                        isBooking = isBooking
+                    )
+                }
             }
         }
 

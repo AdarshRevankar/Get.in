@@ -26,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -77,7 +78,7 @@ fun ConfirmationScreen(
                 ) {
                     Icon(
                         imageVector = Icons.Default.CheckCircle,
-                        contentDescription = "Confirmed",
+                        contentDescription = stringResource(R.string.confirmed),
                         modifier = Modifier.size(80.dp),
                         tint = Color(0xFF4CAF50)
                     )
@@ -86,14 +87,14 @@ fun ConfirmationScreen(
                 Spacer(modifier = Modifier.padding(24.dp))
 
                 Text(
-                    text = "Confirmed",
+                    text = stringResource(R.string.confirmed),
                     style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Bold),
                     color = MaterialTheme.colorScheme.onSurface,
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
 
                 Text(
-                    text = "Your booking has been confirmed successfully!",
+                    text = stringResource(R.string.booking_confirmed_message),
                     style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(horizontal = 32.dp),
@@ -103,7 +104,7 @@ fun ConfirmationScreen(
 
             // Go to Home text at the bottom
             Text(
-                text = "Go to Home",
+                text = stringResource(R.string.go_to_home),
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.Medium,

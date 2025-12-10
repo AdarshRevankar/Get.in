@@ -23,6 +23,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
@@ -52,7 +53,7 @@ fun EventCard(event: Event, onClick: () -> Unit = {}) {
                 error = {
                     Image(
                         painter = painterResource(R.color.black),
-                        contentDescription = "Error",
+                        contentDescription = stringResource(R.string.error),
                         contentScale = ContentScale.Crop
                     )
                 },

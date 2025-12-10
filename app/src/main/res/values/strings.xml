@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">Get.In</string>
+    
+    <!-- Review Screen -->
+    <string name="review_the_details">Review the details</string>
+    <string name="event_details">Event Details</string>
+    <string name="event">Event: %1$s</string>
+    <string name="location">Location: %1$s</string>
+    <string name="date">Date: %1$s</string>
+    <string name="slot_details_timings">Slot Details &amp; Timings</string>
+    <string name="slot">Slot: %1$s</string>
+    <string name="start_time">Start Time: %1$s</string>
+    <string name="end_time">End Time: %1$s</string>
+    <string name="general_instructions">General Instructions</string>
+    <string name="general_instructions_content">• Please arrive 15 minutes before the scheduled time\n• Bring a valid ID for verification\n• Contact us if you need to reschedule or cancel\n• Follow all event guidelines and safety protocols</string>
+    <string name="your_information">Your Information</string>
+    <string name="name">Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="book_now">Book Now</string>
+    
+    <!-- Confirmation Screen -->
+    <string name="confirmed">Confirmed</string>
+    <string name="booking_confirmed_message">Your booking has been confirmed successfully!</string>
+    <string name="go_to_home">Go to Home</string>
+    
+    <!-- Slots Section -->
+    <string name="available_slots">Available Slots</string>
+    <string name="no_slots_available">No slots available</string>
+    
+    <!-- Slot Card -->
+    <string name="start">Start: </string>
+    <string name="end">End: </string>
+    
+    <!-- Content Descriptions -->
+    <string name="back">Back</string>
+    <string name="error">Error</string>
+    
+    <!-- Error Messages -->
+    <string name="events_load_error">Unable to load events</string>
+    <string name="events_load_error_message">Items cannot be loaded. Please try again later.</string>
+    <string name="retry">Retry</string>
 </resources>

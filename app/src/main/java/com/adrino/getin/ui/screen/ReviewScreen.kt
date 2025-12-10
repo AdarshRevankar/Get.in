@@ -15,8 +15,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -32,12 +30,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 import androidx.core.text.isDigitsOnly
+import com.adrino.getin.R
 import com.adrino.getin.data.model.Customer
 import com.adrino.getin.data.model.Event
 import com.adrino.getin.data.model.Slot
+import com.adrino.getin.ui.component.DetailCard
 import com.adrino.getin.ui.component.EventDetailTopBar
+import com.adrino.getin.util.CARD_CORNER_RADIUS
+import com.adrino.getin.util.DEFAULT_SPACING
+import com.adrino.getin.util.MEDIUM_SPACING
 import com.adrino.getin.util.MOBILE_NUMBER_LENGTH
+import com.adrino.getin.util.SMALL_SPACING
+import com.adrino.getin.util.TEXT_FIELD_CORNER_RADIUS
 import com.adrino.getin.util.formatTimeToAMPM
 
 @Composable
@@ -71,112 +77,69 @@ fun ReviewScreen(
                 .fillMaxSize()
                 .padding(innerPadding)
                 .verticalScroll(rememberScrollState())
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+                .padding(DEFAULT_SPACING.dp),
+            verticalArrangement = Arrangement.spacedBy(DEFAULT_SPACING.dp)
         ) {
             // Review the details header
             Text(
-                text = "Review the details",
+                text = stringResource(R.string.review_the_details),
                 style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
                 color = MaterialTheme.colorScheme.onSurface
             )
 
             // Event Details Card
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(12.dp),
-                elevation = CardDefaults.cardElevation(4.dp)
-            ) {
-                Column(
-                    modifier = Modifier.padding(16.dp)
-                ) {
-                    Text(
-                        text = "Event Details",
-                        style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Text(
-                        text = "Event: ${event.eventName.orEmpty()}",
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = "Location: ${event.eventLocation.orEmpty()}",
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = "Date: ${event.eventDate.orEmpty()}",
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
+            DetailCard(title = stringResource(R.string.event_details)) {
+                Text(
+                    text = stringResource(R.string.event, event.eventName.orEmpty()),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(modifier = Modifier.height(SMALL_SPACING.dp))
+                Text(
+                    text = stringResource(R.string.location, event.eventLocation.orEmpty()),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(modifier = Modifier.height(SMALL_SPACING.dp))
+                Text(
+                    text = stringResource(R.string.date, event.eventDate.orEmpty()),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             }
 
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(12.dp),
-                elevation = CardDefaults.cardElevation(4.dp)
-            ) {
-                Column(
-                    modifier = Modifier.padding(16.dp)
-                ) {
-                    Text(
-                        text = "Slot Details & Timings",
-                        style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Text(
-                        text = "Slot: ${slot.name.orEmpty()}",
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = "Start Time: ${formatTimeToAMPM(slot.startTime)}",
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = "End Time: ${formatTimeToAMPM(slot.endTime)}",
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
+            // Slot Details Card
+            DetailCard(title = stringResource(R.string.slot_details_timings)) {
+                Text(
+                    text = stringResource(R.string.slot, slot.name.orEmpty()),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(modifier = Modifier.height(SMALL_SPACING.dp))
+                Text(
+                    text = stringResource(R.string.start_time, formatTimeToAMPM(slot.startTime)),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(modifier = Modifier.height(SMALL_SPACING.dp))
+                Text(
+                    text = stringResource(R.string.end_time, formatTimeToAMPM(slot.endTime)),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             }
 
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(12.dp),
-                elevation = CardDefaults.cardElevation(4.dp)
-            ) {
-                Column(
-                    modifier = Modifier.padding(16.dp)
-                ) {
-                    Text(
-                        text = "General Instructions",
-                        style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Text(
-                        text = "• Please arrive 15 minutes before the scheduled time\n" +
-                                "• Bring a valid ID for verification\n" +
-                                "• Contact us if you need to reschedule or cancel\n" +
-                                "• Follow all event guidelines and safety protocols",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
+            // General Instructions Card
+            DetailCard(title = stringResource(R.string.general_instructions)) {
+                Text(
+                    text = stringResource(R.string.general_instructions_content),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             }
 
             Text(
-                text = "Your Information",
+                text = stringResource(R.string.your_information),
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
                 color = MaterialTheme.colorScheme.onSurface
             )
@@ -184,34 +147,34 @@ fun ReviewScreen(
             OutlinedTextField(
                 value = userName,
                 onValueChange = { userName = it },
-                label = { Text("Name") },
+                label = { Text(stringResource(R.string.name)) },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
-                shape = RoundedCornerShape(8.dp)
+                shape = RoundedCornerShape(TEXT_FIELD_CORNER_RADIUS.dp)
             )
 
             OutlinedTextField(
                 value = userPhoneNumber,
-                onValueChange = {  enteredPhoneNumber ->
+                onValueChange = { enteredPhoneNumber ->
                     if (enteredPhoneNumber.length <= MOBILE_NUMBER_LENGTH) {
                         userPhoneNumber = enteredPhoneNumber
                     }
                 },
-                label = { Text("Mobile Number") },
+                label = { Text(stringResource(R.string.mobile_number)) },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
                 maxLines = 1,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
-                shape = RoundedCornerShape(8.dp)
+                shape = RoundedCornerShape(TEXT_FIELD_CORNER_RADIUS.dp)
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(MEDIUM_SPACING.dp))
 
             Button(
                 onClick = { onBookNowClick(Customer(userName, userPhoneNumber)) },
                 enabled = isFormValid && !isBooking,
                 modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(12.dp)
+                shape = RoundedCornerShape(CARD_CORNER_RADIUS.dp)
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -227,14 +190,14 @@ fun ReviewScreen(
                         Spacer(modifier = Modifier.padding(horizontal = 8.dp))
                     }
                     Text(
-                        text = "Book Now",
+                        text = stringResource(R.string.book_now),
                         style = MaterialTheme.typography.titleMedium,
                         modifier = Modifier.padding(vertical = 8.dp)
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(DEFAULT_SPACING.dp))
         }
     }
 }
