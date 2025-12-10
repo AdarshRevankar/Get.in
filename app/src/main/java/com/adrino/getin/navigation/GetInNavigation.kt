@@ -9,30 +9,25 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.adrino.getin.data.repository.EventRepository
 import com.adrino.getin.ui.screen.ConfirmationScreen
 import com.adrino.getin.ui.screen.EventDetailScreen
 import com.adrino.getin.ui.screen.HomeScreen
 import com.adrino.getin.ui.screen.ReviewScreen
 import com.adrino.getin.ui.viewmodel.EventViewModel
-import com.adrino.getin.ui.viewmodel.EventViewModelFactory
 import com.adrino.getin.ui.viewmodel.SlotViewModel
-import com.adrino.getin.ui.viewmodel.SlotViewModelFactory
 
 
 @Composable
 fun GetInNavigation(
-    navController: NavHostController,
-    repository: EventRepository,
-    eventViewModelFactory: EventViewModelFactory
+    navController: NavHostController
 ) {
-    val eventViewModel = viewModel<EventViewModel>(factory = eventViewModelFactory)
+    val eventViewModel: EventViewModel = hiltViewModel()
     NavHost(
         navController = navController,
         startDestination = NavRoute.Home.route,
@@ -73,9 +68,7 @@ fun GetInNavigation(
             }
         ) { backStackEntry ->
             val selectedEvent by eventViewModel.selectedEvent.collectAsState()
-            val slotViewModel: SlotViewModel = viewModel(
-                factory = SlotViewModelFactory(repository)
-            )
+            val slotViewModel: SlotViewModel = hiltViewModel()
             selectedEvent?.let {
                 EventDetailScreen(
                     event = selectedEvent!!,

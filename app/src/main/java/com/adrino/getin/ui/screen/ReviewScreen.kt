@@ -31,7 +31,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.text.isDigitsOnly
 import com.adrino.getin.data.model.Customer
@@ -40,28 +39,6 @@ import com.adrino.getin.data.model.Slot
 import com.adrino.getin.ui.component.EventDetailTopBar
 import com.adrino.getin.util.MOBILE_NUMBER_LENGTH
 import com.adrino.getin.util.formatTimeToAMPM
-
-@Preview
-@Composable
-fun Item() {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        CircularProgressIndicator(
-            modifier = Modifier.size(20.dp),
-            color = MaterialTheme.colorScheme.onSurface,
-            strokeWidth = 2.dp
-        )
-        Spacer(modifier = Modifier.padding(horizontal = 8.dp))
-        Text(
-            text = "Book Now",
-            style = MaterialTheme.typography.titleMedium,
-            modifier = Modifier.padding(vertical = 8.dp)
-        )
-    }
-}
 
 @Composable
 fun ReviewScreen(
@@ -79,7 +56,7 @@ fun ReviewScreen(
             userPhoneNumber.isDigitsOnly() && userPhoneNumber.length == MOBILE_NUMBER_LENGTH
 
     BackHandler(enabled = isBooking) {
-        // Disabled back press
+        // Back press disabled during booking
     }
 
     Scaffold(
@@ -244,7 +221,7 @@ fun ReviewScreen(
                     if (isBooking) {
                         CircularProgressIndicator(
                             modifier = Modifier.size(20.dp),
-                            color = MaterialTheme.colorScheme.onSurface,
+                            color = MaterialTheme.colorScheme.onPrimary,
                             strokeWidth = 2.dp
                         )
                         Spacer(modifier = Modifier.padding(horizontal = 8.dp))

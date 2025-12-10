@@ -5,11 +5,14 @@ import androidx.lifecycle.viewModelScope
 import com.adrino.getin.data.model.Customer
 import com.adrino.getin.data.model.Event
 import com.adrino.getin.data.repository.EventRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class EventViewModel(
+@HiltViewModel
+class EventViewModel @Inject constructor(
     private val repository: EventRepository
 ) : ViewModel() {
 
