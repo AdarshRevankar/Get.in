@@ -6,6 +6,7 @@ import com.adrino.getin.data.model.Event
 import com.adrino.getin.data.model.Slot
 import com.adrino.getin.data.remote.ApiService
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import retrofit2.Response
 
@@ -25,6 +26,7 @@ class EventRepository(private val apiService: ApiService) {
         param["slotId"] = slotId
         param["customerName"] = customer.name
         param["phoneNumber"] = customer.phoneNumber
+        delay(5000)
         // Mocking Response
         // handleResponse(apiService.bookSlot(param))
         handleBookResponse(apiService.bookSlotMock())

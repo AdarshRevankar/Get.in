@@ -82,7 +82,8 @@ fun GetInNavigation(
                     viewModel = slotViewModel,
                     onBackClick = {
                         eventViewModel.clearSelectedEvent()
-                        navController.popBackStack()
+                        eventViewModel.clearSelectedSlot()
+                        navController.popBackStack(NavRoute.Home.route, inclusive = false)
                     },
                     onSlotClick = { slot ->
                         eventViewModel.setSelectedSlot(slot)
@@ -121,14 +122,17 @@ fun GetInNavigation(
         ) { backStackEntry ->
             val selectedEvent by eventViewModel.selectedEvent.collectAsState()
             val selectedSlot by eventViewModel.selectedSlot.collectAsState()
+            val isBooking by eventViewModel.isBooking.collectAsState()
             
             if (selectedEvent != null && selectedSlot != null) {
                 ReviewScreen(
                     event = selectedEvent!!,
                     slot = selectedSlot!!,
                     onBackClick = {
-                        eventViewModel.clearSelectedSlot()
-                        navController.popBackStack()
+                        if (!isBooking) {
+                            eventViewModel.clearSelectedSlot()
+                            navController.popBackStack()
+                        }
                     },
                     onBookNowClick = { customer ->
                         eventViewModel.bookSlot(
@@ -146,7 +150,8 @@ fun GetInNavigation(
                                 }
                             }
                         )
-                    }
+                    },
+                    isBooking = isBooking
                 )
             }
         }

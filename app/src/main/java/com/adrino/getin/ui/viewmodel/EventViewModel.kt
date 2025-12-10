@@ -22,6 +22,9 @@ class EventViewModel(
     private val _selectedSlot = MutableStateFlow<com.adrino.getin.data.model.Slot?>(null)
     val selectedSlot: StateFlow<com.adrino.getin.data.model.Slot?> = _selectedSlot
 
+    private val _isBooking = MutableStateFlow(false)
+    val isBooking: StateFlow<Boolean> = _isBooking
+
     fun fetchEvents() {
         viewModelScope.launch {
             val result = repository.getEvents()
@@ -36,7 +39,9 @@ class EventViewModel(
         onSuccess: () -> Unit, onError: (String) -> Unit
     ) {
         viewModelScope.launch {
+            _isBooking.value = true
             val result = repository.bookSlot(eventId, slotId, customer)
+            _isBooking.value = false
             if (result.isSuccess) {
                 onSuccess()
             } else {
